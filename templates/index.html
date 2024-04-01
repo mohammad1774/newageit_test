@@ -1,0 +1,29 @@
+<html>
+<head>
+    <title>Message Processing</title>
+</head>
+<body>
+    <h1>Message Processing</h1>
+
+    <!-- Input Form -->
+    <form action="/" method="post">
+        <label for="message">Enter a Message:</label>
+        <input type="text" id="message" name="message" placeholder="Enter your message">
+        <button type="submit">Submit</button>
+    </form>
+
+
+    <!-- Display Data from Database -->
+    
+        <h2> The message submitted is : </h2>
+        <p> {{message}} </p>
+        <h2>Data from Database:</h2>
+        {% if data %}
+        <p>OTP: {{ data[1] }}</p>
+        <p>Time: {{ data[2] }}</p>
+        <p>Website Name: {{ data[3] }}</p>
+    {% else %}
+        <p>No data available</p>
+    {% endif %}
+</body>
+</html>
